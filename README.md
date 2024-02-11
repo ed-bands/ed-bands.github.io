@@ -13,7 +13,7 @@ I am able to clone this repository to my local host through the github desktop a
 ## 2. Selecting `Add`
 ![Selecting Add](Screenshots/GitHub Assignment/Screenshot 2024-02-10 at 10.03.57 PM.png)
 ## 3. Selecting `Clone Repository`
-![Selecting Clone Respository](Screenshots/GitHub Assignment/Screenshot 2024-02-10 at 10.04.25 PM.png)
+![Selecting Clone Respository](https://raw.github.com/ed-bands/ed-bands.github.io/main/Screenshots/GitHub Assignment/Screenshot 2024-02-10 at 10.04.25 PM.png)
 ## 4. Selecting repo from under `Your Repositories`
 ![Selecting Repo from under Your Repositories](Screenshots/GitHub Assignment/Screenshot 2024-02-10 at 9.48.08 PM.png)
 
