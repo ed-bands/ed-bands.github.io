@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
         <script defer src="https://pyscript.net/lastest/pyscript.js"></script>
         <style>
             label{
@@ -11,7 +11,7 @@
     </head>
     <body>
         <form>
-            <label for="operandOne">x:</label><input name="operandOne" id="operandOne" >
+            <label for="operandOne">x:</label><input name="operandOne" id="operandOne">
             <label for="total">Result:</label><div name="total" id="total"></div>
         </form>
         <py-script>
@@ -19,6 +19,7 @@
         operandOne = float(input_box.value)
         result = Element("total")
         result.write("Hello! The input says:" + str(operandOne))
+        print("Hello World")
         </py-script>
     </body>
 </html>
