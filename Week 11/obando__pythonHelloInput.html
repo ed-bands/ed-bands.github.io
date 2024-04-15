@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link 
-            rel="stylesheet" 
-            href="https://pyscript.net/latest/pyscript.css" 
-        />
-        <script 
-            type="module"
-            src="https://pyscript.net/lastest/pyscript.js"
-        ></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.2/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2024.3.2/core.js"></script>
         <style>
             label{
                 display:block;
@@ -16,16 +11,21 @@
         </style>
     </head>
     <body>
+        <py-script>
+        import js
+        from pyscript import display, when
+        </py-script>
         <form>
-            <label for="operandOne">x:</label><input name="operandOne" id="operandOne">
+            <h5><b>Enter you text below and press submit for a message.</b></h5>
+            <label for="operandOne"></label><input name="operandOne" id="operandOne">
+            <button type="button" id="submit">Submit</button>
             <label for="total">Result:</label><div name="total" id="total"></div>
         </form>
-        <script type="py">
-        input_box = Element("operandOne")
-        operandOne = float(input_box.value)
-        result = Element("total")
-        result.write("Hello! The input says:" + str(operandOne))
-        print("Hello World")
-        </script>
+        <py-script>
+        @when("click", selector="#submit")
+        def print_message():
+            input_box = str(js.document.getElementById("operandOne").value)
+            display("Hello! The input says: " + str(input_box))
+        </py-script>
     </body>
 </html>
