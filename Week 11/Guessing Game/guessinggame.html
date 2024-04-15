@@ -15,28 +15,28 @@
         packages = ["numpy"]
     </py-config>
     <py-script>
-    import numpy as np
-    import js
-    selection = np.random.randint(0,100,1)[0]
-    from pyscript import display
+        import numpy as np
+        import js
+        selection = np.random.randint(0,100,1)[0]
+        from pyscript import display
     </py-script>
     <form>
-    <label for="guess">Guess:</label><input name="guess" id="guess">
-    <button type="button" id="submit">Check Guess</button>
-    <label for="result">Result:</label><div name="result" id="result"></div>
+        <label for="guess">Guess:</label><input name="guess" id="guess">
+        <button type="button" id="submit">Check Guess</button>
+        <label for="result">Result:</label><div name="result" id="result"></div>
     </form>
     </body>
     <py-script>
-    from pyscript import when
-    @when("click", selector="#submit")
-    def check_guess():
-        user_guess =  int(js.document.getElementById("guess").value)
-        result = js.document.getElementById("result")
-        if user_guess == selection:
-            display("Congratulations! You guessed correctly.")
-        elif user_guess > selection:
-            display("Try again! Your guess was too high.")
-        else:
-            display("Try again! Your guess was too low.")
+        from pyscript import when
+        @when("click", selector="#submit")
+        def check_guess():
+            user_guess =  int(js.document.getElementById("guess").value)
+            result = js.document.getElementById("result")
+            if user_guess == selection:
+                display("Congratulations! You guessed correctly.")
+            elif user_guess > selection:
+                display("Try again! Your guess was too high.")
+            else:
+                display("Try again! Your guess was too low.")
     </py-script>
 </html>
